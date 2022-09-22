@@ -8,13 +8,13 @@ interface Props {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Array<Todo>>>;
   setCompletedTodos: React.Dispatch<React.SetStateAction<Array<Todo>>>;
-  completedTodos: Todo[];
+  CompletedTodos: Todo[];
 }
 
 const TodoList: FC<Props> = ({
   todos,
   setTodos,
-  completedTodos,
+  CompletedTodos,
   setCompletedTodos,
 }) => {
   return (
@@ -50,11 +50,11 @@ const TodoList: FC<Props> = ({
             {...provided.droppableProps}
           >
             <span className="todos__heading">Completed task</span>
-            {completedTodos?.map((todo, index) => (
+            {CompletedTodos?.map((todo, index) => (
               <SingleTodo
                 index={index}
                 todo={todo}
-                todos={completedTodos}
+                todos={CompletedTodos}
                 key={todo.id}
                 setTodos={setCompletedTodos}
               />

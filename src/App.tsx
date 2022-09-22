@@ -9,7 +9,7 @@ import "./App.css";
 const App: FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
-  const [completedTodos, setCompletedTodos] = useState<Todo[]>([]);
+  const [CompletedTodos, setCompletedTodos] = useState<Todo[]>([]);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,7 +36,7 @@ const App: FC = () => {
 
     let add;
     let active = todos;
-    let complete = completedTodos;
+    let complete = CompletedTodos;
 
     // Source Logic
     if (source.droppableId === "TodosList") {
@@ -66,7 +66,7 @@ const App: FC = () => {
         <TodoList
           todos={todos}
           setTodos={setTodos}
-          completedTodos={completedTodos}
+          CompletedTodos={CompletedTodos}
           setCompletedTodos={setCompletedTodos}
         />
       </div>

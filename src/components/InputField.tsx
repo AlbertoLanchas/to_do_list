@@ -11,7 +11,6 @@ const InputField: FC<Props> = ({ todo, setTodo, handleAdd }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   return (
     <form
-      action=""
       className="input"
       onSubmit={(e) => {
         handleAdd(e);
@@ -19,15 +18,15 @@ const InputField: FC<Props> = ({ todo, setTodo, handleAdd }) => {
       }}
     >
       <input
-        ref={inputRef}
-        type="input"
-        value={todo}
-        onChange={(e) => setTodo(e.target.value)}
+        type="text"
         placeholder="Enter a task"
+        value={todo}
+        ref={inputRef}
+        onChange={(e) => setTodo(e.target.value)}
         className="input__box"
       />
       <button className="input_submit" type="submit">
-        Go
+        GO
       </button>
     </form>
   );
