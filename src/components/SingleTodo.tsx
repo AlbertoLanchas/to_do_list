@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
-import { Todo } from "../models/model";
+import { Todo } from "../models/models";
 
 type Props = {
   todo: Todo;
